@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nexus</title>
+        <link rel="stylesheet" href="community2.css">
+        <link rel="icon" href="../../logos/icon nexus.svg">
+        <script src="community.js" defer></script>
+    </head>
+    <body>
+        <button class="desplegable" onclick=show() id="desplegable-btn">
+            <div class="bar" id="bar1"></div>
+            <div class="bar" id="bar2"></div>
+            <div class="bar" id="bar3"></div>
+        </button>
+            <nav class="nav-list" id="sidebar">
+                <ul class="principal">
+                    <li><a href=""><img src="../../images/icons/home.svg" alt="inicio" class="nav-icons"><span>Inicio</span></a></li>
+                    <li><a href=""><img src="../../images/icons/inbox.svg" alt="inicio" class="nav-icons"><span>Bandeja de entrada</span></a></li>
+                    <hr>
+
+                    <li class="dropdown">
+                        <div class="head">
+                            <span>Proyectos</span>
+                            <button class="dropdown-btn" onclick=toggleSubMenu(this)>
+                                <img src="../../images/icons/dropdown.svg" alt="">
+                            </button>
+                            <button class="add-btn">
+                                <img src="../../images/icons/add.svg" alt="">
+                            </button>
+                        </div>
+                        <ul class="sub-menu">
+                            <div>
+                                <li><a href=""><span>example</span></a></li>
+                            </div>
+                        </ul>
+
+                    </li>
+                    <hr>
+                    <li>
+                        <div>
+                            <img src="../../images/icons/team.svg" alt="inicio" class="nav-icons">
+                            <span>Equipo</span>
+                        </div>
+                        <ul>
+                            <li><span>Lisa Mendoza</span></li>
+                        </ul>
+                    </li>
+                    
+            
+                </ul>
+            </nav>
+        <main>
+        </main>
+    </body>
+</html>
