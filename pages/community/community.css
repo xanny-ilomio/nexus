@@ -57,7 +57,7 @@ body{
         "sidebar main";
     transition: grid-template-columns 300ms ease-in-out;
     overflow-x: hidden;
-    /* background-color: var(--gray); */ /*aun no se*/
+    background-color: var(--white); /*aun no se*/
 }
 img{
     -webkit-user-drag: none;
@@ -321,6 +321,7 @@ main, .header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px 0;
 }
 .date{
     font-size: 18px;
@@ -330,4 +331,70 @@ main, .header {
 .hello{
     font-size: 25px;
     color: #444;
+}
+
+
+/* TABLA PROYECTOS */
+.dashboard-header, .dashboard-content{
+    padding: 18px 20px;
+    color: #222;
+}
+.dashboard-header{
+    border-bottom: 1.5px solid var(--white);
+    border-radius: 18px 18px 0 0;
+    background-color: var(--purple);
+}
+.dashboard-content{
+    padding: 0;
+    border-bottom: 1.5px solid var(--white);
+    border-radius: 0 0 18px 18px;
+    background-color: var(--gray);
+
+}
+.add-project{
+    border-radius: 0 0 18px 18px;
+    border: 0;
+    outline: 0;
+    width: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Transforma Sans_Regular';
+}
+
+.projects-table {
+    width: 100%;
+    border-bottom: 1.5px solid white;
+}
+#head1-table{
+    width: 60%;
+}
+#head2-table{
+    width: 20%;
+    border-left: 1.5px solid var(--white);
+    border-right: 1.5px solid var(--white);
+}
+#head3-table{
+    width: 20%;
+}
+.projects-table th,.projects-table td {
+  border-bottom: 1.5px solid #eee;
+}
+.projects-table th{
+    font-size: 14px;
+    padding:14px 10px;
+    text-align: left;
+}
+
+.projects-table tbody tr:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+.add-project{
+    cursor: pointer;
+}
+
+.dashboard-header h3{
+    font-family: 'Transforma Mix_Bold';
+    color: var(--yellow);
 }
