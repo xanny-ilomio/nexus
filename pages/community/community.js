@@ -1,3 +1,4 @@
+// SIDEBAR
 const toggleButton = document.getElementById('desplegable-btn');
 const sidebar = document.getElementById('sidebar');
 const body = document.body;
@@ -34,4 +35,59 @@ window.addEventListener('DOMContentLoaded', () => {
         button.classList.remove('open');
         body.classList.add('sidebar-closed');
     }
+});
+
+// SEARCH BOX AUTOCOMPLETE
+
+    //filter the keywords autocomplete  
+let availableKeywords = [
+    // add the proyects
+    'proyecto',
+    'proyecto',
+    'proyecto',
+    'proyecto',
+    'proyecto',
+    'proyecto',
+];
+const resultBox = document.querySelector(".result-box");
+const inputBox = document.getElementById("input-box");
+
+inputBox.onkeyup = function(){
+    let result=[];
+    let input = inputBox.value;
+    if(input.length){
+        result= availableKeywords.filter((keyword)=>{
+            return keyword.toLowerCase().includes(input.toLowerCase());
+        });
+    }
+    display(result);
+
+    if(!result.length){
+        resultBox.innerHTML= '';
+    }
+}
+
+    //display the autocomplete
+function display(result){
+    const content = result.map((list)=>{
+        return"<li onclick=selectInput(this)>" + list + "</li>";
+    });
+    resultBox.innerHTML = "<ul>" +content.join('')+ "</ul>";
+}
+
+function selectInput(list){
+    inputBox.value = list.innerHTML;
+    resultBox.innerHTML = ' ';
+}
+
+inputBox.addEventListener('focus', () => {
+    document.querySelector('.header').classList.add('active');
+    document.querySelector('.search-box').classList.add('active');
+});
+
+inputBox.addEventListener('blur', () => {
+    setTimeout(() => {
+        document.querySelector('.header').classList.remove('active');
+        document.querySelector('.search-box').classList.remove('active');
+    }, 200);
 });
