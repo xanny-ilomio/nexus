@@ -1,0 +1,190 @@
+@media (min-width: 1440px){
+    .login-left-container .login-logo img{
+        margin-top: 70%;
+        width: 50rem;
+    }
+    .login-left-container .slogan{
+        font-size: 2.5rem;
+    }
+    .login .login-left {
+        border-radius: 0 240px 240px 0;
+    }
+}
+@font-face {
+    font-family: 'Transforma Sans_Bold';
+    src: url('../fonts/TransformaSans_Trial-Bold.woff') format('woff2'),
+        url('../fonts/TransformaSans_Trial-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Transforma Mix_Bold';
+    src: url('/nexus/fonts/TransformaMix_Trial-SemiBold.woff2') format('woff2'),
+        url('/nexus/fonts/TransformaMix_Trial-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Transforma Mix_Regular';
+    src: url('/nexus/fonts/TransformaMix_Trial-Regular.woff2') format('woff2'),
+        url('/nexus/fonts/TransformaMix_Trial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Transforma Sans_Regular';
+    src: url('/nexus/fonts/TransformaSans_Trial-Regular.woff2') format('woff2'),
+        url('/nexus/fonts/TransformaSans_Trial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root{
+    --yellow: #FFE817;
+    --purple: #4D0BAD;
+    --white: #ffffff;
+}
+
+html{
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body{
+    margin: 0;
+    font-family: 'Transforma Sans_Regular';
+}
+img{
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+}
+
+.login-left {
+    font-family: 'Transforma Mix_Regular';
+    background-color: var(--purple);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 50%;
+    border-radius: 0 120px 120px 0;
+    border: none;
+}
+
+.login-left::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        at center,
+        #4D0BAD 0%,
+        rgba(77, 11, 173, 0.8) 20%,
+        rgba(77, 11, 173, 0.4) 60%,
+        rgba(77, 11, 173, 0.1) 90%,
+        transparent 100%
+      ),
+      linear-gradient(135deg, rgba(77, 11, 173, 0.1) 0%, transparent 20%, #4D0BAD 45%, transparent 100%),url("/nexus/images/textures/filter.svg");
+    background-blend-mode: screen;
+    background-repeat: repeat;
+    background-size: cover;
+    opacity: 1; 
+    pointer-events: none;
+    z-index: 1;
+}
+
+.login-left-container {
+    position: relative;
+    z-index: 2; 
+}
+.login-left-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+}
+
+
+.login-logo img{
+    margin-top: 70%;
+    width: 25rem;
+}
+.slogan{
+    font-size: 1.5rem;
+}
+.login-right-container{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--purple);
+}
+.container h1{
+    font-family: 'Transforma Sans_Bold';
+}
+.login-right-container form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 40px;
+    justify-content: center;
+    align-items: center;
+}
+.container input{
+    width: 40vw;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: none;
+    background-color: #eee;
+    font-size: 13px;
+    border-radius: 8px;
+    outline: none;
+    font-family: 'Transforma Sans_Regular';
+}
+.container button{
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 15px;
+    width: 42.5vw;
+    padding:10px 45px;
+    border:  1px solid transparent;
+    border-radius: 8px;
+    font-family: 'Transforma Sans_Bold';
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.input-container img{
+    height: 16px;
+    position: absolute;
+    right: 65px;
+    transform: translateY(120%);
+}
+
+.container a{
+    font-family: 'Transforma Sans_Regular';
+    text-decoration: none;
+    color: var(--purple);
+    margin-top: 20px;
+}
