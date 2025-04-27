@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Transforma Sans_Bold';
-    src: url('../../fonts/TransformaSans_Trial-Bold.woff') format('woff2'),
-        url('../../fonts/TransformaSans_Trial-Bold.woff') format('woff');
+    src: url('../fonts/TransformaSans_Trial-Bold.woff') format('woff'),
+        url('../fonts/TransformaMix_Trial-SemiBold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'Transforma Mix_Bold';
-    src: url('../../fonts/TransformaMix_Trial-SemiBold.woff2') format('woff2'),
-        url('../../fonts/TransformaMix_Trial-SemiBold.woff') format('woff');
+    src: url('../fonts/TransformaMix_Trial-SemiBold.woff2') format('woff2'),
+        url('../fonts/TransformaMix_Trial-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'Transforma Mix_Regular';
-    src: url('../../fonts/TransformaMix_Trial-Regular.woff2') format('woff2'),
-        url('../../fonts/TransformaMix_Trial-Regular.woff') format('woff');
+    src: url('../fonts/TransformaMix_Trial-Regular.woff2') format('woff2'),
+        url('../fonts/TransformaMix_Trial-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
     font-family: 'Transforma Sans_Regular';
-    src: url('../../fonts/TransformaSans_Trial-Regular.woff2') format('woff2'),
-        url('../../fonts/TransformaSans_Trial-Regular.woff') format('woff');
+    src: url('../fonts/TransformaSans_Trial-Regular.woff') format('woff'),
+        url('../fonts/TransformaSans_Trial-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

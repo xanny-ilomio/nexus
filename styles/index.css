@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: 'Transforma Sans_Bold';
-    src: url('../fonts/TransformaSans_Trial-Bold.woff') format('woff2'),
+    src: url('../fonts/TransformaMix_Trial-SemiBold.woff2') format('woff2'),
         url('../fonts/TransformaSans_Trial-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;

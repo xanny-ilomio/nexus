@@ -18,13 +18,14 @@ setInterval(()=>{
 
 // WELCOMEEEE
 function formatHello(date){
+    const useri = document.querySelector(".welcome").dataset.user;
     const hours = date.getHours();
     if(hours<=11 && hours>=5){
-        return `Buenos días, `; //ADD NAME USER ${}
+        return `Buenos días, ${useri}`; //ADD NAME USER ${}
     } else if(hours>=12 && hours<=18){
-        return `Buenas tardes, `;
+        return `Buenas tardes, ${useri}`;
     } else{
-        return `Buenas noches, `;
+        return `Buenas noches, ${useri}`;
     }
 }
 
