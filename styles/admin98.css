@@ -70,7 +70,7 @@ img{
 /* SIDEBAR */
 .nav-list{
     box-sizing: border-box;
-    height: 100%;
+    height: 100vh;
     width: 250px;
     padding: 5px 1em;
     background-color: var(--purple);
@@ -82,6 +82,9 @@ img{
     transition: transform 0.3s ease-in-out;
     z-index: 100;
     grid-area: sidebar;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .nav-list.close{
@@ -196,6 +199,7 @@ img{
     justify-content: flex-end;
     gap: 150px;
     padding: 10px;
+    width: 95%;
 }
 
 .search-box{
@@ -295,17 +299,18 @@ img{
 /* MAIN */
 main{
     grid-area: main;
-    padding: 10px 30px;
+    padding: 10px 50px;
+    width: 90%;
 }
 main, .header {
     flex: 1;
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
-    width: 95%;
 }
 .sidebar-closed main{
     transform: translateX(-250px);
-    width: calc(100% + 180px);
+    width: calc(92% + 180px);
+    padding: 10px 75px;
 }
 .sidebar-closed .header {
     transform: translateX(-200px);
@@ -335,6 +340,10 @@ main, .header {
 
 
 /* TABLA PROYECTOS */
+.projects-dashboard{
+    margin-bottom: 20px;
+    position: relative;
+}
 .dashboard-header, .dashboard-content{
     padding: 18px 20px;
     color: #222;
@@ -378,22 +387,27 @@ main, .header {
     width: 20%;
 }
 /* TABLE USERS */
-.users > .projects-table > #head2-table-user{
+#head2-table-user, #table2-user{
     border-left: 1.5px solid var(--white);
     border-right: 1.5px solid var(--white);
-    color: #FFE817;
 }
-#head3-table-user{
+#head3-table-user, #table3-user{
     border-right: 1.5px solid var(--white);
 }
 
 .projects-table th,.projects-table td {
   border-bottom: 1.5px solid #eee;
 }
+
 .projects-table th{
     font-size: 14px;
     padding:14px 10px;
     text-align: left;
+}
+.projects-table tbody td{
+    padding: 7px;
+    margin: 0;
+    border-top: 1.5px solid var(--white);
 }
 
 .projects-table tbody tr:hover {
@@ -407,4 +421,94 @@ main, .header {
 .dashboard-header h3{
     font-family: 'Transforma Mix_Bold';
     color: var(--yellow);
+}
+
+/* LOGOUT BUTTON */
+
+.logout{
+    width: 95%;
+    border-radius: 5px;
+    background-color: var(--gray);
+    border: 1.5px solid var(--gray);
+    padding: 5px;
+    margin: 10px auto;
+    color: var(--purple);
+    font-family: 'Transforma Mix_Bold';
+}
+
+.logout:hover, .new-user-form select:hover, .new-user-btn:hover{
+    cursor: pointer;
+}
+
+.new-user{
+    background-color: var(--purple);
+    height: 70vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 30px 25px 30px;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    width: 815px;;
+}
+.new-user h1{
+    font-family: 'Transforma Mix_Bold';
+    color: var(--yellow);
+}
+
+.new-user-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 8px;
+    width: 320px;
+}
+
+.new-user-form input, .new-user-form select, .new-user-btn{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: 'Transforma Sans_Regular';
+    color: #333;
+}
+.new-user-form input, .new-user-form select{
+    padding: 8px;
+    width: 300px;
+}
+
+.new-user-btn{
+    padding: 6px;
+    margin: 8px auto;
+    width: 70%;
+    background-color: var(--white);
+    font-family: 'Transforma Mix_Bold';
+    color: var(--purple);
+    transition: transform 500ms ease;
+}
+
+.new-user-btn:hover{
+    transform: scale(1.05);
+}
+
+.close-addUser{
+    display: block;
+    top: 20.5%;
+    right: 9%;
+    width: 20px;
+    height: 20px;
+    transform: translateY(50%);
+    border: 0;
+    background: 0 0;
+    position: fixed;
+    z-index: 200;
+    cursor: pointer;
 }

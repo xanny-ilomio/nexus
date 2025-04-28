@@ -47,7 +47,7 @@ let availableKeywords = [
     'proyecto',
     'proyecto',
     'proyecto',
-    'proyecto',
+    'nose',
 ];
 const resultBox = document.querySelector(".result-box");
 const inputBox = document.getElementById("input-box");

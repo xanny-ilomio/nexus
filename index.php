@@ -30,21 +30,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $_SESSION["user"]=$user;
         //redireccionar segun su rol
         $rolType = $mysqli->prepare("SELECT rol_id FROM usuarios WHERE nombre = ?");
-        $rolType->bind_param("i", $user);
+        $rolType->bind_param("s", $user);
         $rolType->execute();
         //agarrar el valor dentro del row
         $rol = $rolType->get_result();  
         $row = $rol->fetch_assoc();
         $rolResult = $row['rol_id']; 
 
-        if($rolResult == 1){
+        if($rolResult === 1){
             header("Location: pages/admin.php");
             exit();
-        } else if($rolResult == 2){
-            echo"funciono";
+        } else if($rolResult === 2){
             header("Location: pages/community.php");
             exit();
-        }else{
+        }else {
             header("Location: pages/designer.php");
             exit();
 
